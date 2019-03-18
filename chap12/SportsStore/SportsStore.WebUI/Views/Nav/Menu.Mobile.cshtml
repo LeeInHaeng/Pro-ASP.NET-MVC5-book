@@ -1,0 +1,28 @@
+﻿@model IEnumerable<string>
+
+<div data-role="navbar">
+    <ul>
+        @Html.ActionLink("Home", "List", "Product",
+            new
+            {
+                Category = (string)null,
+                Page = 1
+            },
+            new { @class = "btn btn-default btn-sm" })
+
+        @foreach (var link in Model)
+        {
+            @Html.ActionLink(link, "List", "Product",
+                new
+                {
+                    Category = link,
+                    Page = 1
+                },
+                new
+                {
+                    @class = "btn btn-default btn-sm" +
+                                (link == ViewBag.SelectedCategory ? " btn-primary" : "")
+                })
+        }
+    </ul>
+</div>

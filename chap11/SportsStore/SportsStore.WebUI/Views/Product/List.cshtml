@@ -1,0 +1,18 @@
+﻿@using SportsStore.Domain.Entities
+@using PagedList.Mvc
+@model PagedList.IPagedList<Product>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@foreach(var p in Model)
+{
+    @Html.Partial("ProductSummary", p)
+}
+<div class="btn-group pull-right">
+    @Html.PagedListPager(Model, Page => Url.Action("List",
+                                        new { Page, Category = ViewBag.Category }))
+</div>
