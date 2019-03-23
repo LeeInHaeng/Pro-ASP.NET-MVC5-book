@@ -1,22 +1,34 @@
 # URL을 렌더하는 간단한 HTML 헬퍼 메소드
 - Url.Content("~/Content/Site.css")
   - 응용프로그램에 상대적인 URL을 생성한다.
-  - 결과 : /Content/Site.css
+  ```
+  - 결과 : "/Content/Site.css"
+  ```
 - Html.ActionLink("My Link", "Index", "Home")
   - 지정된 액션 및 컨트롤러에 대한 링크를 생성한다.
+  ```
   - 결과 : <a href="/">My Link</a>
+  ```
 - Url.Action("GetPeople", "People")
   - 지정된 액션에 대한 URL을 생성한다.
+  ```
   - 결과 : /People/GetPeople
+  ```
 - Url.RouteUrl(new {controller = "People", action="GetPeople"})
   - 라우트 데이터를 지정해서 URL을 생성한다.
+  ```
   - 결과 : /People/GetPeople
+  ```
 - Html.RouteLink("My Link", new {controller = "People", action="GetPeople"})
   - 라우트 데이터를 지정해서 링크를 생성한다.
+  ```
   - 결과 : <a href="/People/GetPeople">My Link</a>
+  ```
 - Html.RouteLink("My Link", "FormRoute", new {controller = "People", action="GetPeople"})
   - 지정된 라우트에 대한 링크를 생성한다.
+  ```
   - 결과 : <a href="/app/forms/People/GetPeople">My Link</a>
+  ```
 
 # Ajax 를 이용해 부분적으로 뷰 그리기
 - 웹 페이지를 새로 고치지 않고도 백그라운드에서 서버의 데이터를 요청해서 가져오기 위한 모델
