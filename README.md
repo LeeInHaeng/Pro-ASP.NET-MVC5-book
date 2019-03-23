@@ -119,3 +119,14 @@
 # Chap16 고급 라우팅 기능
 - ActionLink 사용법
 - Area 구분
+
+# Chap23 URL과 Ajax 헬퍼 메서드
+- URL을 렌더하는 간단한 HTML 헬퍼 메소드
+- Ajax 를 이용해 부분적으로 뷰 그리기
+  - 폼 태그 전송시 뷰에서 table 전체를 다시 그리는 것이 아닌 비동기적 처리를 통한 부분적 업데이트를 위해 부분 뷰를 사용
+- Ajax 옵션 설정하기
+  - Url
+  - LoadingElementId와 LoadingElementDuration
+  - Confirm
+  - @Ajax.ActionLink
+  - Ajax 콜백
