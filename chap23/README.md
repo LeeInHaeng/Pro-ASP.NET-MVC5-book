@@ -35,7 +35,9 @@
 - NuGet에서 jQuery와 Microsoft.jQuery.Unobtrusive 설치
 - Web.config 파일에서 Ajax 기능을 활성화 시킨다.
   - appSettings 태그 안에서
+  ```
   - <add key="UnobtrusiveJavaScriptEnabled" value="true" /> 로 지정
+  ```
 - cshtml에서 jQuery 사용
 ```
     <script src="~/Scripts/jquery-3.3.1.js"></script>
